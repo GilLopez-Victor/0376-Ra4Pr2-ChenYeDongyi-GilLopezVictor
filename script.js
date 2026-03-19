@@ -57,4 +57,39 @@ boto.addEventListener('click', () => { // tot el que hi ha dins d'aquí s'execut
     const intent = []; // llista buida on posarem els 4 números que ha triat el jugador
     selects.forEach(s => intent.push(parseInt(s.value))); // llegim cada desplegable i afegim el seu número a la llista
 
-    
+
+// Control de Rondes 
+
+    rondesFetes++; // comptem 1 intent +
+    rondesRestantsSpan.textContent = MAX_INTENTS - rondesFetes; // actualitzem el número que veu el jugador a la pantalla (restem 5 - 1)
+
+
+    logTerminal('Intent #' + rondesFetes + ': [ ' + intent.join(' | ') + ' ]'); // escrivim a la terminal quins números ha posat
+
+
+    if (typeof avaluarIntent !== 'undefined') { // mirem si el codi de l'Estudiant B ja està carregat
+        const resultat = avaluarIntent(intent); 
+
+
+        logTerminal('Pistes: [ ' + resultat.pistes.join(' | ') + ' ]'); // mostrem les pistes que ens ha donat l'Estudiant B fent un join
+
+
+        if (resultat.guanyat) { // si les 4 pistes són '1', ho ha encertat tot
+            logTerminal('ACCÉS CONCEDIT — Has endevinat el codi secret!', 'success'); // missatge que ha guanyat
+            boto.disabled = true; // bloquejem el botó perquè no es pugui seguir jugant
+            boto.style.opacity = '0.4'; // el posem mig transparent el boto (qüestions d'estil que molen)
+            selects.forEach(s => s.disabled = true); // bloquejem també els desplegables
+        } else if (rondesFetes >= MAX_INTENTS) { // si ha gastat l'últim intent i no ha guanyat llavors
+            logTerminal('SISTEMA BLOQUEJAT — Has esgotat els intents.', 'error'); // missatge de derrota
+            boto.disabled = true; // mateix bloqueig que quan guanya
+            boto.style.opacity = '0.4';
+            selects.forEach(s => s.disabled = true);
+        }
+    } else { // si l'altre encara no ha pujat el seu codi posem el següent:
+        logTerminal('[AVÍS] Motor de joc no disponible encara. Falta feature-game-engine', 'error'); 
+    }
+});
+
+
+logTerminal('Selects inicialitzats. Introdueix el teu codi i prem executar.'); // primer missatge que apareix quan s'obre el joc
+
