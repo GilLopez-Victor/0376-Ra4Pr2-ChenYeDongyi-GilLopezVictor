@@ -39,3 +39,22 @@ const logTerminal = (missatge, tipus = 'normal') => { // aquesta funció escriu 
     terminal.scrollTop = terminal.scrollHeight; // fem que la terminal baixi sol cap avall
 };
 
+// Gestor d'Esdeveniments 
+
+const boto = document.getElementById('btn-enviar'); // agafem el botó EXECUTAR CODI del html
+const rondesRestantsSpan = document.getElementById('rondes-restants'); // agafem el número de rondes que surt a la pantalla per poder canviar-lo
+
+
+boto.addEventListener('click', () => { // tot el que hi ha dins d'aquí s'executa quan el jugador prem el botó
+
+
+    if (rondesFetes >= MAX_INTENTS) { // si el jugador ha gastat tots els intents
+        logTerminal('No queden rondes. Refresca la pàgina per tornar a jugar.', 'error'); // retorna aquest missatge
+        return;
+    }
+
+
+    const intent = []; // llista buida on posarem els 4 números que ha triat el jugador
+    selects.forEach(s => intent.push(parseInt(s.value))); // llegim cada desplegable i afegim el seu número a la llista
+
+    
