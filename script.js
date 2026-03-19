@@ -8,10 +8,34 @@ const selects = document.querySelectorAll('.code-input');
 
 
 selects.forEach(select => {
-    for (let i = 0; i <= 9; i++) {
+    for (let i = 0; i <= 9; i++) { // repetim del 0 al 9
         const opcio = document.createElement('option');
-        opcio.value = i;
-        opcio.textContent = i;
-        select.appendChild(opcio);
+        opcio.value = i; // el valor que guardarà quan el seleccionin
+        opcio.textContent = i; // el número que veurà l'usuari a la pantalla
+        select.appendChild(opcio); // posem l'opció dins del desplegable
     }
 });
+
+// Funció logTerminal(missatge, tipus)
+
+const logTerminal = (missatge, tipus = 'normal') => { // aquesta funció escriu una línia nova a la terminal, si no diem el tipus posa normal
+    const terminal = document.getElementById('terminal');
+    const linia = document.createElement('p'); // creem un paràgraf buit que serà la nova línia
+    linia.classList.add('line'); // li posem l'estil del terminal (del css) 
+
+
+    if (tipus === 'error') { // si ens passen 'error'
+        linia.classList.add('error'); // li posem color vermell en el CSS
+        linia.textContent = '[ERROR] > ' + missatge; // afegim el missatge d'error
+    } else if (tipus === 'success') { // si ens passen success
+        linia.classList.add('success'); // li posem fons verd del CSS
+        linia.textContent = '[OK] > ' + missatge; // afegim el missatge d'èxit
+    } else { // si no és ni error ni èxit
+        linia.textContent = '[INPUT] > ' + missatge; // és un missatge normal
+    }
+
+
+    terminal.appendChild(linia); // enganxem la línia al final de la terminal
+    terminal.scrollTop = terminal.scrollHeight; // fem que la terminal baixi sol cap avall
+};
+
