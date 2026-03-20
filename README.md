@@ -24,6 +24,18 @@
  
 20. **Per què és important controlar qui pot fer **push** directament a la branca principal (`main`)?**
  
-   Perque la branca `main` representa una versio estable del projecte. Si es fan canvis sense control pot provocar errors en produccio.
+   Perque la branca `main` representa una versio estable del projecte. Si es fan canvis sense control pot provocar errors en producció.
+ 
+---
+
+## 5. Utilitza les aplicacions de forma cooperativa
+ 
+21. **Explica com poden treballar diverses persones al mateix projecte utilitzant GitHub.**
+ 
+   Cada usuari clona el repositori i treballa en una branca local. Despres puja els canvis al repositori remot i crea una `pull request` per integrar-los. Això el que fa és treballar en paralel sense conflictes constants.
+ 
+22. **Per què és útil treballar amb branques en lloc de modificar directament la branca principal?**
+ 
+   Perque aïlla els canvis i evita afectar la versio estable. També el que fa és provar funcionalitats abans de integrar-les a `main`.
  
 ---
