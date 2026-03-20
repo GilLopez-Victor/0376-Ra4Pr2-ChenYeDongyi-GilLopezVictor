@@ -1,5 +1,5 @@
----
- 
+
+
 ## 4. Aplica criteris de seguretat en l'accés dels usuaris
  
 > Aplica criteris de seguretat en l'accés dels usuaris
@@ -36,11 +36,11 @@
  
 21. **Explica com poden treballar diverses persones al mateix projecte utilitzant GitHub.**
  
-   Cada usuari clona el repositori i treballa en una branca local. Despres puja els canvis al repositori remot i crea una `pull request` per integrar-los. Això el que fa és treballar en paralel sense conflictes constants.
+    Cada usuari clona el repositori i treballa en una branca local. Despres puja els canvis al repositori remot i crea una `pull request` per integrar-los. Això el que fa és treballar en paralel sense conflictes constants.
  
 22. **Per què és útil treballar amb branques en lloc de modificar directament la branca principal?**
  
-   Perque aïlla els canvis i evita afectar la versio estable. També el que fa és provar funcionalitats abans de integrar-les a `main`.
+    Perque aïlla els canvis i evita afectar la versio estable. També el que fa és provar funcionalitats abans de integrar-les a `main`.
  
 ---
 
@@ -50,15 +50,15 @@
 
 23. **Per què és important incloure un fitxer **README.md** en un repositori de GitHub?**
  
-   Perque descriu el projecte, instalacio i us. És clau per que altres desenvolupadors entenguin el funcionament.
+    Perque descriu el projecte, instalacio i us. És clau per que altres desenvolupadors entenguin el funcionament.
  
 24. **Quins avantatges té utilitzar **Markdown** per escriure documentació a GitHub?**
  
-   `Markdown` és lleuger i facil d'escriure, el que fa és formatar text sense complicacions. A més es compatible amb `Git` per veure canvis.
+    `Markdown` és lleuger i facil d'escriure, el que fa és formatar text sense complicacions. A més es compatible amb `Git` per veure canvis.
  
 25. **Com pot ajudar la documentació a altres desenvolupadors que volen utilitzar o modificar el projecte?**
  
-   Facilita entendre el codi, instalacio i estructura. Això el que fa és contribuir sense perdre temps investigant.
+    Facilita entendre el codi, instalacio i estructura. Això el que fa és contribuir sense perdre temps investigant.
  
 ---
  
