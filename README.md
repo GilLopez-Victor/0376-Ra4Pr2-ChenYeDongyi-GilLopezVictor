@@ -39,3 +39,21 @@
    Perque aïlla els canvis i evita afectar la versio estable. També el que fa és provar funcionalitats abans de integrar-les a `main`.
  
 ---
+
+## 6. Elabora documentació relativa a l'ús i la gestió de les aplicacions
+ 
+23. **Per què és important incloure un fitxer **README.md** en un repositori de GitHub?**
+ 
+   Perque descriu el projecte, instalacio i us. És clau per que altres desenvolupadors entenguin el funcionament.
+ 
+24. **Quins avantatges té utilitzar **Markdown** per escriure documentació a GitHub?**
+ 
+   `Markdown` és lleuger i facil d'escriure, el que fa és formatar text sense complicacions. A més es compatible amb `Git` per veure canvis.
+ 
+25. **Com pot ajudar la documentació a altres desenvolupadors que volen utilitzar o modificar el projecte?**
+ 
+   Facilita entendre el codi, instalacio i estructura. Això el que fa és contribuir sense perdre temps investigant.
+ 
+---
+ 
+*Documentació elaborada per Dong Yi i Víctor*
